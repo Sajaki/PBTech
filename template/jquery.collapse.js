@@ -1,5 +1,6 @@
 /*
  * Collapse plugin for jQuery
+ * v1.1.2
  * --
  * source: http://github.com/danielstocks/jQuery-Collapse/
  * site: http://webcloud.se/jQuery-Collapse
@@ -15,7 +16,7 @@
   function Collapse (el, options) {
     options = options || {};
     var _this = this,
-      query = options.query || "> :even";
+        query = options.query || "> :even";
 
     $.extend(_this, {
       $el: el,
@@ -37,10 +38,10 @@
     // Capute ALL the clicks!
     (function(scope) {
       _this.$el.on("click", "[data-collapse-summary] " + (scope.options.clickQuery || ""),
-        $.proxy(_this.handleClick, scope));
+          $.proxy(_this.handleClick, scope));
 
       _this.$el.bind("toggle close open",
-        $.proxy(_this.handleEvent, scope));
+          $.proxy(_this.handleEvent, scope));
 
     }(_this));
   }
@@ -50,7 +51,7 @@
       e.preventDefault();
       state = state || "toggle";
       var sections = this.sections,
-        l = sections.length;
+          l = sections.length;
       while(l--) {
         if($.contains(sections[l].$summary[0], e.target)) {
           sections[l][state]();
@@ -151,7 +152,7 @@
       var nodes = (scan) ? $("body").find("[data-collapse]") : $(this);
       return nodes.each(function() {
         var settings = (scan) ? {} : options,
-          values = $(this).attr("data-collapse") || "";
+            values = $(this).attr("data-collapse") || "";
         $.each(values.split(" "), function(i,v) {
           if(v) settings[v] = true;
         });
@@ -164,7 +165,7 @@
   // global namespace
   exports.jQueryCollapse = Collapse;
   exports.jQueryCollapseSection = Section;
-  
+
   //jQuery DOM Ready
   $(function() {
     $.fn.collapse(false, true);

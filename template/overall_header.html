@@ -31,11 +31,11 @@
 
 {% if S_ALLOW_CDN %}
 <script>
-	WebFontConfig = {
-		google: {
-			families: ['Open+Sans:600:cyrillic-ext,latin,greek-ext,greek,vietnamese,latin-ext,cyrillic']
-		}
-	};
+    WebFontConfig = {
+        google: {
+            families: ['Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese']
+        }
+    };
 
 	(function(d) {
 		var wf = d.createElement('script'), s = d.scripts[0];
@@ -45,6 +45,7 @@
 	})(document);
 </script>
 {% endif %}
+    <link href="{{ T_FONT_AWESOME_LINK }}" rel="stylesheet">
 
 	<link href="{{ ROOT_PATH }}styles/prosilver/theme/common.css?assets_version={{ T_ASSETS_VERSION }}" rel="stylesheet">
 	<link href="{{ ROOT_PATH }}styles/prosilver/theme/links.css?assets_version={{ T_ASSETS_VERSION }}" rel="stylesheet">
@@ -69,8 +70,12 @@
 	<link href="{{ ROOT_PATH }}styles/prosilver/theme/plupload.css?assets_version={{ T_ASSETS_VERSION }}" rel="stylesheet">
 	{% endif %}
 
+    {% if S_COOKIE_NOTICE %}
+    <link href="{{ T_ASSETS_PATH }}/cookieconsent/cookieconsent.min.css?assets_version={{ T_ASSETS_VERSION }}" rel="stylesheet">
+    {% endif %}
+
 	<!--[if lte IE 9]>
-	<link href="{{ ROOT_PATH }}styles/prosilver/theme/tweaks.css?assets_version={{ T_ASSETS_VERSION }}" rel="stylesheet">
+    <link href="{{ T_THEME_PATH }}/tweaks.css?assets_version={{ T_ASSETS_VERSION }}" rel="stylesheet">
 	<![endif]-->
 
 {% EVENT overall_header_head_append %}
@@ -85,17 +90,16 @@
 <body id="phpbb" class="nojs notouch section-{{ SCRIPT_NAME }} {{ S_CONTENT_DIRECTION }} {{ BODY_CLASS }} topbar topbar-fixed">
 
 {% EVENT overall_header_body_before %}
-
+{% INCLUDE 'top_bar.html' %}
 <div id="wrap">
 	<a id="top" class="anchor" accesskey="t"></a>
 	<div id="page-header">
-		{% INCLUDE 'top_bar.html' %}
 		<div class="headerbar" role="banner">
 			{% EVENT overall_header_headerbar_before %}
 			<div class="inner">
 
-			<div id="site-description">
-				<a id="logo" class="logo" href="{% if U_SITE_HOME %}{{ U_SITE_HOME }}{% else %}{{ U_INDEX }}{% endif %}" title="{% if U_SITE_HOME %}{{ lang('SITE_HOME') }}{% else %}{{ lang('INDEX') }}{% endif %}"></a>
+            <div id="site-description" class="site-description">
+                <a id="logo" class="logo" href="{% if U_SITE_HOME %}{{ U_SITE_HOME }}{% else %}{{ U_INDEX }}{% endif %}" title="{% if U_SITE_HOME %}{{ lang('SITE_HOME') }}{% else %}{{ lang('INDEX') }}{% endif %}">
 				<h1>{{ SITENAME }}</h1>
 				<p>{{ SITE_DESCRIPTION }}</p>
 				<p class="skiplink"><a href="#start_here">{{ lang('SKIP') }}</a></p>
@@ -115,18 +119,19 @@
 			</div>
 			{% endif %}
             {% EVENT overall_header_searchbox_after %}
-			</div>
+
+            </div>
 			{% EVENT overall_header_headerbar_after %}
 		</div>
-
 		{% EVENT overall_header_navbar_before %}
 		{% INCLUDE 'navbar_header.html' %}
+        {% INCLUDE 'navbar.html' %}
 	</div>
 
 	{% EVENT overall_header_page_body_before %}
 
 	<a id="start_here" class="anchor"></a>
-	<div id="page-body" role="main">
+    <div id="page-body" class="page-body" role="main">
 		{% if S_BOARD_DISABLED and S_USER_LOGGED_IN and (U_MCP or U_ACP) %}
 		<div id="information" class="rules">
 			<div class="inner">
@@ -134,5 +139,4 @@
 			</div>
 		</div>
 		{% endif %}
-
 		{% EVENT overall_header_content_before %}

@@ -1,4 +1,4 @@
-PBTech Style for phpBB 3.1.11
+PBTech Style for phpBB 3.2.10
 ============
 
 ![Screenshot](/contrib/screenshot.png)
@@ -39,6 +39,9 @@ For more information and support, we suggest you visit
 - [avathar.be] (http://www.avathar.be/bbdkp/viewforum.php?f=82)  
 
 ### Changes
+3.0.14 (tbd)
+- updated for phpbb 3.2.10
+
 3.0.13 (24-10-2020)
 - updated for phpbb 3.1.11
     
