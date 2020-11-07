@@ -16,21 +16,17 @@
 		{% if U_VIEWONLINE %}<h3><a href="{{ U_VIEWONLINE }}">{{ lang('WHO_IS_ONLINE') }}</a></h3>{% else %}<h3>{{ lang('WHO_IS_ONLINE') }}</h3>{% endif %}
 		<p>
 			{% EVENT index_body_block_online_prepend %}
-
-            {{ TOTAL_USERS_ONLINE }} ({{ lang('ONLINE_EXPLAIN') }})<br />{{ RECORD_USERS }}<br />
-            {% if U_VIEWONLINE %}
-                <br />{{ LOGGED_IN_USER_LIST }}
-                {% if LEGEND %}<br /><em>{{ lang('LEGEND') }}{{ lang('COLON') }} {{ LEGEND }}</em>{% endif %}
-            {% endif %}
-
+			{{ TOTAL_USERS_ONLINE }} ({{ lang('ONLINE_EXPLAIN') }})<br />{{ RECORD_USERS }}<br />
+			{% if U_VIEWONLINE %}
+				<br />{{ LOGGED_IN_USER_LIST }}
+				{% if LEGEND %}<br /><em>{{ lang('LEGEND') }}{{ lang('COLON') }} {{ LEGEND }}</em>{% endif %}
+			{% endif %}
 			{% EVENT index_body_block_online_append %}
 			{% if U_VIEWONLINE %}<a class="online-pagelink" href="{{ U_VIEWONLINE }}" title="{{ lang('WHO_IS_ONLINE') }}">{{ LAST_POST_IMG }}</a>{% endif %}
 		</p>
 	</div>
 {% endif %}
-
 {% EVENT index_body_birthday_block_before %}
-
 {% if S_DISPLAY_BIRTHDAY_LIST %}
 	<div class="stat-block birthday-list">
 		<h3>{{ lang('BIRTHDAYS') }}</h3>
@@ -54,6 +50,12 @@
 {% endif %}
 
 {% EVENT index_body_stat_blocks_after %}
+
+{% if RECENT_TOPICS_DISPLAY %}
+{% if ADS_INDEX_CODE and not S_IS_BOT and definition.ADSIDE eq false %}
+<div class="misc-block advertisement">{{ ADS_INDEX_CODE }}</div>
+{% endif %}
+{% endif %}
 
 <div class="clear"></div>
 
