@@ -1,4 +1,4 @@
-PBTech Style for phpBB 3.2.10
+PBTech Style for phpBB 3.2.10 (dev)
 ============
 
 ![Screenshot](/contrib/screenshot.png)
@@ -7,7 +7,7 @@ This style was inspired by the Battlenet forums 2015. example
 http://web.archive.org/web/20141207163104/http://us.battle.net/en/forum/topic/10423582376
 
 #### Requirements
-- phpBB 3.1 
+- phpBB 3.2 
 - prosilver
 
 #### Important notes
