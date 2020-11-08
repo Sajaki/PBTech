@@ -1,4 +1,42 @@
-/* Search
+/* Form Styles
+---------------------------------------- */
+/* General form styles
+----------------------------------------*/
+
+select {
+    background: #040d1a url("./images/icons/select.png") no-repeat 100% center;
+    background-color: #FFF;
+    background-image: url("./images/icons/select.png");
+    border-color: #b5b3b2;
+    color: #5a5a5a;
+    -webkit-appearance: none; /* Removes default chrome and safari style */
+    -moz-appearance: none; /* Removes Default Firefox style */
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+    select {
+        padding-right: 10px;
+    }
+}
+
+/* Posting page styles
+----------------------------------------*/
+
+/* Input field styles
+---------------------------------------- */
+
+/* Form button styles
+---------------------------------------- */
+
+/* <a> button in the style of the form buttons */
+
+/* Hover states */
+
+/* Focus states */
+
+/* Topic and forum Search */
+
+/* Search box (header)
 --------------------------------------------- */
 .search .postbody {
     width: 76.5%;
@@ -22,23 +60,6 @@ body.section-search p:not(.jumpbox-return) a.arrow-right {
     display: none;
 }
 
-/* Forms
---------------------------------------------- */
-select {
-    background: #040d1a url("./images/icons/select.png") no-repeat 100% center;
-    background-color: #FFF;
-    background-image: url("./images/icons/select.png");
-    border-color: #b5b3b2;
-    color: #5a5a5a;
-    -webkit-appearance: none; /* Removes default chrome and safari style */
-    -moz-appearance: none; /* Removes Default Firefox style */
-}
-
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-    select {
-        padding-right: 10px;
-    }
-}
 
 .search-box .inputbox,
 .search-box button.search-icon {
@@ -106,6 +127,9 @@ fieldset.submit-buttons input { padding: 4px 6px; }
     outline-color: rgba(17, 163, 234, 0.5);
 }
 
+/* Input field styles
+---------------------------------------- */
+
 .inputbox {
     background-color: #040D1A;
     border-color: #7F7F7F;
@@ -137,10 +161,14 @@ fieldset.submit-buttons input { padding: 4px 6px; }
 .inputbox::-moz-placeholder { color: #707070; opacity: 0.6; }
 .inputbox::-webkit-input-placeholder { color: #707070; opacity: 0.6; }
 
+
 input.search {
     background-image: none;
     padding: 2px;
 }
+
+/* Form button styles
+---------------------------------------- */
 
 a.button1, a.button1:active,
 a.button2, a.button2:active {
@@ -355,174 +383,3 @@ input.button3::-moz-focus-inner {
     width: 31px !important;
 }
 
-/* Quick-reply
---------------------------------------------- */
-#qr_postform > .panel {
-    max-width: 757px;
-    margin: -3px auto 10px;
-    padding: 25px 30px;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.6);
-    border: none;
-}
-
-#qr_postform .panel {
-    background: linear-gradient(rgba(177,177,177,1), rgba(200,200,200,0));
-    border: none;
-    box-shadow: none;
-    margin: 0;
-    padding: 15px;
-    max-width: inherit;
-}
-
-#qr_postform > .panel > .inner {
-    max-width: 643px;
-    margin: 0 auto;
-}
-#qr_postform #message-box {
-    /*padding: 15px 19px 27px 15px;*/
-    padding: 15px 14px 27px 15px;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 100%;
-    margin-bottom: 0;
-}
-
-#qr_postform #message-box {
-    background: none;
-    padding: 0;
-    margin: 5px 0 10px;
-}
-
-#qr_postform textarea {
-    background: #0D1A2D;
-    background: #0D1A2D linear-gradient(to bottom, rgba(8, 17, 38, 1) 0, rgba(13, 26, 45, 0) 32px);
-    margin: 0;
-    padding: 2px;
-    border-radius: 5px;
-    transition: box-shadow 0.25s ease-in-out 0s;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-#qr_postform textarea {
-    background: #FFF;
-}
-
-#qr_postform textarea:focus {
-    box-shadow: 0 0 3px 1px #11A3EA;
-}
-
-
-#qr_postform textarea:focus {
-    box-shadow: 0 0 3px 1px rgba(0,0,0,0.1);
-}
-
-#qr_postform fieldset.submit-buttons {
-    position: relative;
-    margin: 0;
-    padding: 14px 10px;
-    width: 100%;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-#qr_postform fieldset.submit-buttons {
-    background: none;
-    padding: 0;
-}
-
-/* Collapseable blocks
---------------------------------------------- */
-.collapse-box h2,
-.stat-block h3 {
-    font-size: 20px;
-    line-height: 30px;
-    margin: 10px 2px 0;
-    padding: 0 0 0 8px;
-    letter-spacing: -0.05em;
-    text-transform: uppercase;
-    border-bottom: 1px solid #444;
-    color: #888;
-    font-family: Verdana, Helvetica, Arial, sans-serif;
-    font-weight: normal;
-    transition: border-bottom 0.20s ease-in-out 0s;
-}
-
-.collapse-box h2,
-.stat-block h3 {
-    font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
-    font-weight: bold;
-    color: #393939;
-    border-bottom-color: #b5b3b2;
-}
-
-.collapse-box h2.open,
-.stat-block h3.open {
-    border-bottom-color: transparent;
-}
-
-.collapse-box h2:hover,
-.stat-block h3:hover {
-    border-bottom-color: #CCC;
-}
-
-.collapse-box h2:hover,
-.stat-block h3:hover {
-    border-bottom-color: #a5a3a2;
-}
-
-.collapse-box h2 a,
-.stat-block h3 a {
-    display: block;
-    transition: color 0.20s ease-in-out 0s;
-    color: #888;
-}
-
-.collapse-box h2 a,
-.stat-block h3 a { color: #333232; }
-
-.collapse-box h2 a:hover,
-.stat-block h3 a:hover { color: #FFF; text-decoration: none; }
-
-.collapse-box h2 a:hover,
-.stat-block h3 a:hover { color: #037bad; text-decoration: none; }
-
-.collapse-box h2 a:active,
-.stat-block h3 a:active { color: #00C0FF; }
-
-.collapse-box h2 a[href="#"]:before,
-.stat-block h3 a[href="#"]:before {
-    content: "\f196";
-    display: inline-block;
-    margin-right: 8px;
-    font-family: FontAwesome;
-    font-size: 0.9em;
-    font-weight: normal;
-    opacity: 0.6;
-}
-
-
-.collapse-box h2 a[href="#"]:before,
-.stat-block h3 a[href="#"]:before {
-    content: "\f067";
-    font-size: 14px;
-    float: right;
-    opacity: 1;
-}
-
-.collapse-box h2.open a[href="#"]:before,
-.stat-block h3.open a[href="#"]:before {
-    content: "\f147";
-}
-
-.collapse-box h2.open a[href="#"]:before,
-.stat-block h3.open a[href="#"]:before {
-    content: "\f068";
-}
-
-.stat-block h3 {
-    font-size: 16px;
-    line-height: 24px;
-}

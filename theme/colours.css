@@ -52,13 +52,8 @@ hr {
     border-color: #b5b3b2;
 }
 
-/* Content container styles
---------------------------------------------- */
-.content h2, .panel h2 {
-    color: #074e79;
-    background: none;
-    border-bottom-color: #3380C8;
-}
+/* Post body styles
+----------------------------------------*/
 
 .postbody h3 {
     font-size: 1.2em;
@@ -99,10 +94,18 @@ blockquote {
     color: #000;
 }
 
+/* Content container styles
+--------------------------------------------- */
+.content h2, .panel h2 {
+    color: #074e79;
+    background: none;
+    border-bottom-color: #3380C8;
+}
+
+
 /* BB Code styles
 ----------------------------------------*/
 /* Quote block */
-
 
 blockquote {
     background: rgba(10, 10, 10, 0.2) linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 0, rgba(0, 0, 0, 0) 30%);
@@ -313,6 +316,12 @@ dl.thumbnail dt a:hover img,
 .content a > img.postimage:hover {
     border: 3px solid #00b6ff !important;
 }
+
+/* Post poll styles
+----------------------------------------*/
+
+/* Poster profile block
+----------------------------------------*/
 
 .posthilit {
     background-color: #CCC;
