@@ -38,6 +38,13 @@
 .icon-search > a:before 			{ content: "\f002"; }
 .icon-search-advanced > a:before 	{ content: "\f1de"; }
 .icon-search-self > a:before 		{ content: "\f007"; }
+
+.icon-square-o > a:before 			{ content: "\f096"; }
+a.icon-square-o  					{ content: "\f096"; }
+
+.icon-check-square-o > a:before 	{ content: "\f046"; }
+a.icon-check-square-o  				{ content: "\f046"; }
+
 .icon-search-unanswered > a:before 	{ content: "\f1ae"; }
 .icon-search-unread > a:before 		{ content: "\f06e"; }
 .icon-search-new > a:before 		{ content: "\f0e7"; }
