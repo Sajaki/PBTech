@@ -215,7 +215,7 @@ dl.pm_read {
 		min-height: inherit !important;
 	}
 
-	#page-body {
+	.page-body {
 		background: none !important;
 	}
 

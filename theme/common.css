@@ -51,20 +51,20 @@ body {
 /* page body
 --------------------------------------------- */
 
-#page-body {
+.page-body {
     margin: 0;
     padding: 20px 30px 38px;
     position: relative;
 }
 
-#page-body {
+.page-body {
     background: none;
     border: none;
     border-radius: 0;
     padding: 0 0 20px 0;
 }
 
-#page-body:before {
+.page-body:before {
     content: none;
     display: none;
     position: absolute;
@@ -77,14 +77,14 @@ body {
     z-index: -1;
 }
 
-#page-body:after {
+.page-body:after {
     clear: both;
     content: "";
     display: none;
 }
 
 .headerbar,
-#page-body,
+.page-body,
 #nav-main,
 #body-header ul.navlinks,
 #page-footer .navbar {
