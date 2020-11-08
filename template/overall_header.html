@@ -45,18 +45,12 @@
 	})(document);
 </script>
 {% endif %}
-<!--  <link href="{{ T_FONT_AWESOME_LINK }}" rel="stylesheet">  -->
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-<link href="{{ ROOT_PATH }}styles/prosilver/theme/common.css?assets_version={{ T_ASSETS_VERSION }}" rel="stylesheet">
-<link href="{{ ROOT_PATH }}styles/prosilver/theme/links.css?assets_version={{ T_ASSETS_VERSION }}" rel="stylesheet">
-<link href="{{ ROOT_PATH }}styles/prosilver/theme/content.css?assets_version={{ T_ASSETS_VERSION }}" rel="stylesheet">
-<link href="{{ ROOT_PATH }}styles/prosilver/theme/buttons.css?assets_version={{ T_ASSETS_VERSION }}" rel="stylesheet">
-<link href="{{ ROOT_PATH }}styles/prosilver/theme/cp.css?assets_version={{ T_ASSETS_VERSION }}" rel="stylesheet">
-<link href="{{ ROOT_PATH }}styles/prosilver/theme/forms.css?assets_version={{ T_ASSETS_VERSION }}" rel="stylesheet">
+<link href="{{ T_FONT_AWESOME_LINK }}" rel="stylesheet">
+<link href="{{ ROOT_PATH }}styles/prosilver/theme/stylesheet.css?assets_version=1" rel="stylesheet">
+<link href="{{ ROOT_PATH }}styles/prosilver/theme/en/stylesheet.css?assets_version=1" rel="stylesheet">
+
 <link href="{{ T_STYLESHEET_LINK }}" rel="stylesheet">
-<link href="{{ ROOT_PATH }}styles/prosilver/theme/responsive.css?assets_version={{ T_ASSETS_VERSION }}" rel="stylesheet" media="all and (max-width: 700px)">
-<link href="{{ T_THEME_PATH }}/responsive.css?assets_version={{ T_ASSETS_VERSION }}" rel="stylesheet" media="all and (max-width: 700px)">
-<link href="{{ T_THEME_PATH }}/custom.css?assets_version={{ T_ASSETS_VERSION }}" rel="stylesheet">
+
 {% if S_CONTENT_DIRECTION eq 'rtl' %}
 	<link href="{{ ROOT_PATH }}styles/prosilver/theme/bidi.css?assets_version={{ T_ASSETS_VERSION }}" rel="stylesheet">
 	<link href="{{ T_THEME_PATH }}/bidi.css?assets_version={{ T_ASSETS_VERSION }}" rel="stylesheet">
@@ -65,6 +59,7 @@
 {% if S_PLUPLOAD %}
 	<link href="{{ ROOT_PATH }}styles/prosilver/theme/plupload.css?assets_version={{ T_ASSETS_VERSION }}" rel="stylesheet">
 {% endif %}
+
 {% if S_COOKIE_NOTICE %}
 	<link href="{{ T_ASSETS_PATH }}/cookieconsent/cookieconsent.min.css?assets_version={{ T_ASSETS_VERSION }}" rel="stylesheet">
 {% endif %}
@@ -72,17 +67,19 @@
 <!--[if lte IE 9]>
 <link href="{{ T_THEME_PATH }}/tweaks.css?assets_version={{ T_ASSETS_VERSION }}" rel="stylesheet">
 <![endif]-->
+
 {% EVENT overall_header_head_append %}
+
 {{ definition.STYLESHEETS }}
-<link href="{{ T_THEME_PATH }}/extensions.css?assets_version={{ T_ASSETS_VERSION }}" rel="stylesheet">
+
 {% EVENT overall_header_stylesheets_after %}
 
 </head>
-<body id="phpbb" class="nojs notouch section-{{ SCRIPT_NAME }} {{ S_CONTENT_DIRECTION }} {{ BODY_CLASS }} topbar topbar-fixed">
+<body id="phpbb" class="nojs notouch section-{{ SCRIPT_NAME }} {{ S_CONTENT_DIRECTION }} {{ T_THEME_NAME }} {{ BODY_CLASS }}">
 
 {% EVENT overall_header_body_before %}
 {% INCLUDE 'top_bar.html' %}
-<div id="wrap">
+<div id="wrap" class="wrap">
 	<a id="top" class="anchor" accesskey="t"></a>
 	<div id="page-header">
 		<div class="headerbar" role="banner">
@@ -91,6 +88,7 @@
 
 			<div id="site-description" class="site-description">
 				<a id="logo" class="logo" href="{% if U_SITE_HOME %}{{ U_SITE_HOME }}{% else %}{{ U_INDEX }}{% endif %}" title="{% if U_SITE_HOME %}{{ lang('SITE_HOME') }}{% else %}{{ lang('INDEX') }}{% endif %}">
+				<span class="site_logo"></span></a>
 				<h1>{{ SITENAME }}</h1>
 				<p>{{ SITE_DESCRIPTION }}</p>
 				<p class="skiplink"><a href="#start_here">{{ lang('SKIP') }}</a></p>

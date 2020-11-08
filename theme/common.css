@@ -14,8 +14,10 @@ body {
     overflow-y: scroll;
 }
 
+/* Main blocks
+---------------------------------------- */
 
-#wrap {
+.wrap {
     border: none;
     border-radius: 0;
     margin: 0 auto;
@@ -45,6 +47,9 @@ body {
 #page-header .navbar ul.linklist > li {
     height: 24px;
 }
+
+/* page body
+--------------------------------------------- */
 
 #page-body {
     margin: 0;
@@ -95,17 +100,6 @@ body {
     min-height: inherit;
     padding: 0 10px;
     position: relative;
-}
-
-#logo {
-    background: url("./images/logo.png") no-repeat 50% 0;
-    display: block;
-    width: 308px;
-    height: 92px;
-    margin: 10px 0;
-    padding: 0;
-    line-height: 0;
-    background-size: 100% 100%;
 }
 
 #site-description {
@@ -313,6 +307,9 @@ table.table1,
     color: #00577E;
     border-bottom-color: #00577E;
 }
+
+/* Responsive breadcrumbs
+----------------------------------------*/
 
 .breadcrumbs .crumb:before {
     content: '\f054';
@@ -809,10 +806,33 @@ table.info tbody th {
     color: inherit;
 }
 
+/* Misc layout styles
+---------------------------------------- */
+
+/* column[1-2] styles are containers for two column layouts */
+.column1 {
+	float: left;
+	clear: left;
+	width: 49%;
+}
+
+.column2 {
+	float: right;
+	clear: right;
+	width: 49%;
+}
+
+/* Action-bars (container for post/reply buttons, pagination, etc.)
+---------------------------------------- */
+.action-bar {
+    margin: 6px 3px;
+}
+
 /* Pagination
 --------------------------------------------- */
-.action-bar {
-    margin: 12px 3px;
+
+.fa-clone {
+    font-size: 11px;
 }
 
 .action-bar.top .pagination {
@@ -820,50 +840,17 @@ table.info tbody th {
 }
 
 .pagination li a {
-    color: #CECECE;
-    background: #333;
-    background: linear-gradient(#333, #505050);
-    border-color: transparent;
-}
-
-.pagination li a,
-.pagination li.page-jump a, .pagination li.next a, .pagination li.previous a {
-    background: #333;
-    background: linear-gradient(#333, #505050);
-    border-color: transparent;
-    color: #CECECE;
-}
-
-.pagination li a:hover,
-.pagination .active a:hover,
-.pagination .dropdown-visible a.dropdown-trigger,
-.nojs .pagination .dropdown-container:hover a.dropdown-trigger {
-    background: #1D1D1D;
-    background: linear-gradient(#1D1D1D, #343434);
-    border-color: transparent;
-    color: #FFF;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    display: block;
+    font-size: 0.9em;
+    font-weight: normal;
+    line-height: 1.4em;
+    min-width: 10px;
+    padding: 3px;
+    text-align: center;
     text-decoration: none;
-    box-shadow: none;
-}
-
-.pagination li.active span {
-    background-color: #0080B2;
-    border-color: transparent;
-    color: #FFFFFF;
-}
-
-.pagination li.active span:hover {
-    background-color: #009EE2;
-    border-color: transparent;
-    color: #FFF;
-    text-decoration: none;
-    box-shadow: none;
-}
-
-
-.row .pagination {
-    background-image: url("./images/icons/icon_pages.gif");
-    font-size: 10px;
+    font-family: Verdana,Helvetica,Arial,sans-serif;
 }
 
 .pagination li.page-jump a, .pagination li.next a, .pagination li.previous a {
@@ -881,6 +868,19 @@ table.info tbody th {
     vertical-align: middle;
 }
 
+.pagination li.active span {
+    display: inline-block;
+    font-size: 0.9em;
+    font-weight: normal;
+    font-family: Verdana,Helvetica,Arial,sans-serif;
+    line-height: 1.4em;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    border: 1px solid transparent;
+}
+
+
 .pagination li.page-jump a:after {
     content: '\f124';
     font-size: 12px;
@@ -896,16 +896,14 @@ table.info tbody th {
     padding-right: 1px;
 }
 
-.row .pagination li a, .row .pagination li span {
+
+/* Pagination in viewforum for multipage topics */
+.row .pagination {
+    display: block;
+    margin-top: -18px;
     background: none;
-    border: none;
-    color: #074e79;
-    display: inline;
-    font-size: 1.1em;
-    padding: 0;
-}
-.row .pagination li a:hover {
-    color: #009fff;
+    font-size: 10px;
+    margin-bottom: 3px;
 }
 
 /* Rules & Errors
