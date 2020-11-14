@@ -1,11 +1,8 @@
 <div class="navbar" role="navigation">
 	<div class="inner">
 	<ul id="nav-main" class="nav-main linklist" role="menubar">
-		<li id="quick-links" class="quick-links dropdown-container responsive-menu{% if not S_DISPLAY_QUICK_LINKS and not S_DISPLAY_SEARCH %} hidden{% endif %}" data-skip-responsive="true">
-			<a href="#" class="responsive-menu-link dropdown-trigger">
-				<i class="icon fa-bars fa-fw" aria-hidden="true"></i>
-				<span>{{ lang('QUICK_LINKS') }}</span>
-			</a>
+		<li id="quick-links" class="small-icon quick-links dropdown-container responsive-menu{% if not S_DISPLAY_QUICK_LINKS and not S_DISPLAY_SEARCH %} hidden{% endif %}" data-skip-responsive="true">
+			<a href="#" class="responsive-menu-link dropdown-trigger" title="{{ lang('QUICK_LINKS') }}" >{{ lang('QUICK_LINKS') }}</a>
 			<div class="dropdown">
 				<div class="pointer"><div class="pointer-inner"></div></div>
 				<ul class="dropdown-contents" role="menu">
@@ -136,31 +133,23 @@
 	{% endif %}
 	{% if not S_USER_LOGGED_IN and not S_IS_BOT %}
 		<li class="small-icon icon-logout rightside"  data-skip-responsive="true">
-			<a href="{{ U_LOGIN_LOGOUT }}" title="{{ lang('LOGIN_LOGOUT') }}" accesskey="x" role="menuitem">
-				{{ lang('LOGIN_LOGOUT') }}
-			</a>
+			<a href="{{ U_LOGIN_LOGOUT }}" title="{{ lang('LOGIN_LOGOUT') }}" accesskey="x" role="menuitem">{{ lang('LOGIN_LOGOUT') }}</a>
 		</li>
 		{% if S_REGISTER_ENABLED and not (S_SHOW_COPPA or S_REGISTRATION) %}
 		<li class="small-icon icon-register rightside" data-skip-responsive="true">
-			<a href="{{ U_REGISTER }}" role="menuitem">
-				{{ lang('REGISTER') }}
-			</a>
+			<a href="{{ U_REGISTER }}" role="menuitem">{{ lang('REGISTER') }}</a>
 		</li>
 		{% endif %}
 		{% EVENT navbar_header_logged_out_content %}
 	{% endif %}
 	{% if U_ACP %}
 	<li class="small-icon icon-acp" data-skip-responsive="true">
-		<a href="{{ U_ACP }}" title="{{ lang('ACP') }}" role="menuitem">
-			{{ lang('ACP_SHORT') }}
-		</a>
+		<a href="{{ U_ACP }}" title="{{ lang('ACP') }}" role="menuitem">{{ lang('ACP_SHORT') }}</a>
 	</li>
 	{% endif %}
 	{% if U_MCP %}
 	<li class="small-icon icon-mcp" data-last-responsive="true">
-		<a href="{{ U_MCP }}" title="{{ lang('MCP') }}" role="menuitem">
-			{{ lang('MCP_SHORT') }}
-		</a>
+		<a href="{{ U_MCP }}" title="{{ lang('MCP') }}" role="menuitem">{{ lang('MCP_SHORT') }}</a>
 	</li>
 	{% endif %}
 	{% EVENT overall_header_navigation_prepend %}
