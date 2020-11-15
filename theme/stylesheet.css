@@ -18,8 +18,8 @@
 @import url("imageset.css");
 /*no custom override*/
 /*no responsive override */
-/*no extensions override */
-@import url("fontawesome.css");
+@import url("extensions.css?v=3.2");
+@import url("fontawesome.css?v=3.2");
 @import url("topbar.css?v=3.2");
 @import url("custom.css?v=3.2");
 
