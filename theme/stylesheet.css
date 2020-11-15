@@ -43,13 +43,6 @@ body.pbtech #video-background {
 	}
 }
 
-@media screen and (max-width: 859px) {
-	body.pbtech #logo {
-		width: 200px;
-		height: 100px;
-		margin: 0 0 25px 0;
-	}
-}
 
 /* Miscellaneous styles
 --------------------------------------------- */
