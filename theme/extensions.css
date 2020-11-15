@@ -79,7 +79,6 @@ background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 0
 /* Collapseable blocks
 --------------------------------------------- */
 
-
 .collapse-box h2,
 .stat-block h3 {
   font-size: 20px;
@@ -89,15 +88,17 @@ background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 0
   letter-spacing: -0.05em;
   text-transform: uppercase;
   border-bottom: 1px solid #444;
-  color: #888;
-  font-family: Verdana, Helvetica, Arial, sans-serif;
-  font-weight: normal;
+  border-bottom-color: #b5b3b2;
+  color: #393939;
+  font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
+  font-weight: bold;
   transition: border-bottom 0.20s ease-in-out 0s;
 }
 
+
 .collapse-box h2:hover,
 .stat-block h3:hover {
-  border-bottom-color: #CCC;
+  border-bottom-color: #a5a3a2;
 }
 
 .collapse-box h2.open,
@@ -109,29 +110,30 @@ background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 0
 .stat-block h3 a {
   display: block;
   transition: color 0.20s ease-in-out 0s;
-  color: #888;
+  color: #333232;
 }
 
 .collapse-box h2 a:hover,
-.stat-block h3 a:hover { color: #FFF; text-decoration: none; }
+.stat-block h3 a:hover { color: #037bad; text-decoration: none; }
 
 .collapse-box h2 a:active,
 .stat-block h3 a:active { color: #00C0FF; }
 
 .collapse-box h2 a[href="#"]:before,
 .stat-block h3 a[href="#"]:before {
-  content: "\f196";
+  content: "\f067";
   display: inline-block;
   margin-right: 8px;
   font-family: FontAwesome;
-  font-size: 0.9em;
+  font-size: 14px;
   font-weight: normal;
-  opacity: 0.6;
+  float: right;
+  opacity: 1;
 }
 
 .collapse-box h2.open a[href="#"]:before,
 .stat-block h3.open a[href="#"]:before {
-  content: "\f147";
+  content: "\f068";
 }
 
 .stat-block h3 {
