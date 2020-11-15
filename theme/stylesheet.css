@@ -21,6 +21,7 @@
 /*no extensions override */
 @import url("fontawesome.css");
 @import url("topbar.css?v=3.2");
+@import url("custom.css?v=3.2");
 
 /* pbTech master style specific assets (overall_header {T_THEME_NAME} */
 

@@ -1,4 +1,11 @@
 
+/* Top-bar links
+--------------------------------------------- */
+
+.top-bar .icon1:before			{ content: '\f1b3'; }
+.top-bar .icon2 > a:before		{ content: '\f004'; }
+.top-bar .icon3 > a:before		{ content: '\f0ac'; }
+.top-bar .icon4 > a:before		{ content: '\f0a4'; }
 
 /* Top-bar (custom)
 --------------------------------------------- */
