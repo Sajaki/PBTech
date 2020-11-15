@@ -78,10 +78,11 @@
 <body id="phpbb" class="nojs notouch section-{{ SCRIPT_NAME }} {{ S_CONTENT_DIRECTION }} {{ T_THEME_NAME }} {{ BODY_CLASS }}">
 
 {% EVENT overall_header_body_before %}
-{% INCLUDE 'top_bar.html' %}
+
 <div id="wrap" class="wrap">
 	<a id="top" class="anchor" accesskey="t"></a>
 	<div id="page-header">
+		{% INCLUDE 'top_bar.html' %}
 		<div class="headerbar" role="banner">
 		{% EVENT overall_header_headerbar_before %}
 			<div class="inner">

@@ -69,22 +69,32 @@ i, em {
 /* headerbar*/
 
 .headerbar {
+    max-width: 990px;
+    margin: 0 auto;
+    padding: 0 10px;
     background: none;
     border: none;
     border-radius: 0;
     min-height: inherit;
     padding: 0 10px;
     position: relative;
-    max-width: 990px;
-    margin: 0 auto;
-    padding: 0 10px;
 }
-
 
 /* site description */
 
 .site_logo {
     display: none;
+}
+
+.logo {
+    background: url("./images/logo.png") no-repeat;
+    background-size: 100% 100%;
+    width: 308px;
+    height: 92px;
+    margin: 10px 0;
+    padding: 0;    
+    line-height: 0;
+    display: block;
 }
 
 .site-description {

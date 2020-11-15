@@ -265,22 +265,14 @@ input.button3::-moz-focus-inner {
 /* Search box (header)
 --------------------------------------------- */
 .search-header {
+    background: url("./images/search-bar.gif") no-repeat 0 0;   
     border-radius: 0;
     position: absolute;
     float: none;
-    height: 39px;
-    width: 355px;
-    bottom: 0;
-    left: 12px;
     text-align: left;
     margin: 0;
-}
-
-.search-header {
-    background: url("./images/search-bar.gif") no-repeat 0 0;
     border: none;
     height: 31px;
-    position: absolute;
     right: 10px;
     left: auto;
     bottom: 30px;
