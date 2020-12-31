@@ -2,14 +2,12 @@
 --------------------------------------------------------------
 Colours and backgrounds for common.css
 -------------------------------------------------------------- */
-body {
-    background: #000;
+html, body {
     color: #4A4A4A;
+    background-color: #000;
+
 }
 
-#wrap {
-    background: #D3D1CE;
-}
 
 /* Headings */
 h1 {
@@ -51,9 +49,23 @@ h3 a:hover
 hr {
     border-color: #b5b3b2;
 }
+/*
+--------------------------------------------------------------
+Colours and backgrounds for links.css
+-------------------------------------------------------------- */
 
-/* Post body styles
-----------------------------------------*/
+/* Round cornered boxes and backgrounds
+---------------------------------------- */
+#wrap {
+    background: #D3D1CE;
+}
+
+.forabg {
+    background-color: transparent;
+    background-image: none;
+    background-repeat-x: repeat;
+    background-repeat-y: no-repeat;
+}
 
 .postbody h3 {
     font-size: 1.2em;
@@ -93,6 +105,8 @@ blockquote {
 .post:target .content {
     color: #000;
 }
+
+
 
 /* Content container styles
 --------------------------------------------- */
