@@ -43,7 +43,56 @@ i, em {
 }
 
 
-/* Header box
+.page-body {
+    margin: 0;
+    position: relative;
+    background: none;
+    border: none;
+    border-radius: 0;
+    max-width: 990px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.page-body:before {
+    content: none;
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: -53px;
+    padding-top: 53px;
+    box-shadow: 0 0 12px 6px rgba(0, 0, 0, 0.65);
+    z-index: -1;
+}
+
+.page-body:after {
+    clear: both;
+    content: "";
+    display: none;
+}
+
+/* site description */
+
+.site_logo {
+    display: none;
+}
+
+.site-description {
+    overflow: hidden;
+}
+
+.site-description h1,
+.site-description p {
+    display: none;
+}
+
+.site-description p.skiplink {
+    display: inherit;
+}
+
+/* pbwow
 --------------------------------------------- */
 
 #page-header {
@@ -66,8 +115,8 @@ i, em {
     height: 24px;
 }
 
-/* headerbar*/
-
+/* Round cornered boxes and backgrounds
+---------------------------------------- */
 .headerbar {
     max-width: 990px;
     margin: 0 auto;
@@ -80,12 +129,8 @@ i, em {
     position: relative;
 }
 
-/* site description */
-
-.site_logo {
-    display: none;
-}
-
+/* PBTECH navblock
+--------------------------------------------- */
 .logo {
     background: url("./images/logo.png") no-repeat;
     background-size: 100% 100%;
@@ -97,21 +142,6 @@ i, em {
     display: block;
 }
 
-.site-description {
-    overflow: hidden;
-}
-
-.site-description h1,
-.site-description p {
-    display: none;
-}
-
-.site-description p.skiplink {
-    display: inherit;
-}
-
-
-/* navigation block pbtech */
 .navblock {
     background: #111;
     background: rgba(0, 0, 0, 0.85);
@@ -142,7 +172,7 @@ i, em {
 }
 
 
-/* body header (grey menu breadcrumbs)
+/* PBTECH body header (grey menu breadcrumbs)
 --------------------------------------------- */
 #body-header {
     background-size: auto 100%;
@@ -245,43 +275,6 @@ i, em {
 }
 
 
-/* page body
---------------------------------------------- */
-
-.page-body {
-    margin: 0;
-    position: relative;
-    background: none;
-    border: none;
-    border-radius: 0;
-    max-width: 990px;
-    margin: 0 auto;
-    padding: 0 10px;
-}
-
-.page-body:before {
-    content: none;
-    display: none;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: -53px;
-    padding-top: 53px;
-    box-shadow: 0 0 12px 6px rgba(0, 0, 0, 0.65);
-    z-index: -1;
-}
-
-.page-body:after {
-    clear: both;
-    content: "";
-    display: none;
-}
-
-
-/* Footer
---------------------------------------------- */
-
 #nav-main,
 #body-header ul.navlinks,
 #page-footer .navbar {
@@ -302,20 +295,9 @@ i, em {
     padding: 0 10px;
 }
 
-.copyright {
-    color: inherit;
-}
-
 
 /* Round cornered boxes and backgrounds
 ---------------------------------------- */
-.panel {
-    background: #ECEBEA;
-    border-color: #CAC9C8;
-    border-width: 0 0 1px 0;
-    border-radius: 0px;
-}
-
 .forumbg {
     border-radius: 3px;
     margin: 5px 0 15px;
@@ -333,6 +315,13 @@ i, em {
     padding: 0;
     box-shadow: none;
     outline: none;
+}
+
+.panel {
+    background: #ECEBEA;
+    border-color: #CAC9C8;
+    border-width: 0 0 1px 0;
+    border-radius: 0px;
 }
 
 ul.cplist,
@@ -390,7 +379,10 @@ table.table1,
     padding-left: 3px;
 }
 
-/* Index & forum lists
+/* Navbar specific list items
+----------------------------------------*/
+
+/* pbWoW
 --------------------------------------------- */
 .index-left {
     width: auto;
@@ -580,98 +572,7 @@ table.table1,
 
 /* Topic lists
 --------------------------------------------- */
-li.row,
-.panel-container .panel li.row {
-    border-width: 1px;
-    border-style: solid;
-    border-color: #000 transparent #161616 transparent;
-    transition: background 0.15s ease-in-out 0s;
-}
 
-li.row:hover,
-.panel-container .panel li.row:hover {
-    background-color: #1E1E1E;
-    background-color: rgba(30, 30, 30, 0.8);
-}
-
-li.row.bg1,
-.panel-container .panel li.row.bg1 {
-    background: #252525 linear-gradient(to bottom, rgba(30, 30, 30, 1) 0, rgba(37, 37, 37, 0) 35px);
-    border-color: #252525 #000 #000 #252525;
-}
-
-li.row.bg1:hover,
-.panel-container .panel li.row.bg1:hover {
-    background: #252525 linear-gradient(to top, rgba(30, 30, 30, 1) 0, rgba(37, 37, 37, 0) 35px);
-    color: #FFF;
-}
-
-li.row.bg2,
-.panel-container .panel li.row.bg2 {
-    background: #161616 linear-gradient(to bottom, rgba(11, 11, 11, 1) 0, rgba(22, 22, 22, 0) 35px);
-    border-color: #161616 #000 #000 #161616;
-}
-
-li.row.bg2:hover,
-.panel-container .panel li.row.bg2:hover {
-    background: #161616 linear-gradient(to top, rgba(11, 11, 11, 1) 0, rgba(22, 22, 22, 0) 35px);
-    color: #FFF;
-}
-
-li.row.bg3, /* unread notifications */
-.panel-container .panel li.row.bg3 {
-    background: #333 linear-gradient(to bottom, rgba(40, 40, 40, 1) 0, rgba(51, 51, 51, 0) 35px);
-    border-color: #333 #000 #000 #333;
-}
-
-li.row.bg3:hover,
-.panel-container .panel li.row.bg3:hover {
-    background: #333 linear-gradient(to top, rgba(40, 40, 40, 1) 0, rgba(51, 51, 51, 0) 35px);
-    color: #FFF;
-}
-
-.panel-container li.header{
-    color: #222;
-}
-
-li.row,
-li.row.bg1,
-li.row.bg2 {
-    background: #D8D8D8;
-    border-color: #C5C5C5;
-    border-width: 0 0 1px 0;
-}
-
-.panel-container .panel li.row,
-.panel-container .panel li.row.bg1,
-.panel-container .panel li.row.bg2 {
-    background: #ECEBEA;
-    border-color: #C5C5C5;
-    border-width: 0 0 1px 0;
-}
-
-li.row:hover,
-li.row.bg1:hover,
-li.row.bg2:hover,
-.panel-container .panel li.row:hover,
-.panel-container .panel li.row.bg1:hover,
-.panel-container .panel li.row.bg2:hover {
-    background: #E6E6E6;
-    color: #4A4A4A;
-}
-
-li.row.bg3,
-.panel-container .panel li.row.bg3 {
-    background: #E3E7E9;
-    border-color: #C5C5C5;
-    border-width: 0 0 1px 0;
-}
-
-li.row.bg3:hover,
-.panel-container .panel li.row.bg3:hover {
-    background: #E6E6E6;
-    color: #4A4A4A;
-}
 
 li.row strong {
     color: #FFF;
@@ -747,8 +648,8 @@ dl.icon {
     position: relative;
 }
 
-/* Tables
---------------------------------------------- */
+/* Table styles
+----------------------------------------*/
 table.table1 thead tr {
     background: none;
     border: none;
@@ -872,6 +773,7 @@ table.info tbody th {
 /* Pagination
 --------------------------------------------- */
 
+
 .fa-clone {
     font-size: 11px;
 }
@@ -973,9 +875,12 @@ table.info tbody th {
     text-align: center;
 }
 
+/* Miscellaneous styles
+---------------------------------------- */
 
-/* Rules & Errors
---------------------------------------------- */
+.copyright {
+    color: inherit;
+}
 
 .error {
     color: #FF1111;
@@ -1074,6 +979,11 @@ p.post-notice.reported:before 	{ content: "\f071"; }
 p.post-notice.error:before 		{ content: "\f071"; }
 p.post-notice.unapproved:before	{ content: "\f0e3"; }
 
+
+
+/* Rules & Errors
+--------------------------------------------- */
+
 #information {
     text-align: center;
     padding: 10px !important;
@@ -1082,10 +992,6 @@ p.post-notice.unapproved:before	{ content: "\f0e3"; }
 #information strong {
     margin-bottom: 7px;
 }
-
-/* Drop-down menus
---------------------------------------------- */
-
 
 /* top-bar hamburger menu */
 ul.linklist li.responsive-menu a.responsive-menu-link {
@@ -1112,6 +1018,13 @@ ul.linklist li.responsive-menu a.responsive-menu-link:before {
     left: auto;
     top: auto;
 }
+
+
+/* Bulletin icons for list items
+----------------------------------------*/
+
+/* Drop-down menu
+--------------------------------------------- */
 
 .dropdown .pointer {
     border-color: #999 transparent;
@@ -1231,7 +1144,7 @@ li.notification-reported strong, li.notification-disapproved strong {
 }
 
 
-/* Subforum menus */
+/* pbwow Subforum menus */
 .forums .dropdown-container {
     clear: left;
     float: left;
