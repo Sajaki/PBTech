@@ -35,8 +35,7 @@ Change the `xxx` to the "route" of your custom page
 ### Support
 
 For more information and support, we suggest you visit
-- [PBWoW.com] (http://pbwow.com/forum/) (is down)
-- [avathar.be] (http://www.avathar.be/bbdkp/viewforum.php?f=82)  
+- [avathar.be] (https://www.avathar.be/forum/viewforum.php?f=82)  
 
 ### Changes
 3.0.14 (tbd)
