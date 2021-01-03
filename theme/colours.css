@@ -1156,6 +1156,9 @@ Colours and backgrounds for buttons.css
     box-shadow: none;
 }
 
+.button .icon, .button-secondary {
+    color: #fefefe;
+}
 
 ul.cplist {
     background: linear-gradient(to top, rgba(13, 13, 13, 1) 0, rgba(27, 27, 27, 0) 46px);
