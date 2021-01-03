@@ -1,6 +1,18 @@
 /* Content Styles
 ---------------------------------------- */
 
+li.row
+{
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    transition: background 0.15s ease-in-out 0s;
+}
+
+li.row.bg3,
+.panel-container .panel li.row.bg3 {
+    border-width: 0 0 1px 0;
+}
+
 /* Post body styles
 ----------------------------------------*/
 .postbody {

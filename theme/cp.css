@@ -5,13 +5,7 @@
 ----------------------------------------*/
 
 #cp-main .pm {
-    border: #444;
-    box-shadow: 0 0 4px 2px;
     margin-right: 0;
-}
-
-
-#cp-main .pm {
     border-width: 0 0 1px 0;
     box-shadow: none;
 }

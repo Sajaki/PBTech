@@ -49,18 +49,6 @@ hr {
     border-color: #b5b3b2;
 }
 
-.post {
-    box-shadow: inset 0 0 0 1px #000, 0 0 0 1px #000, 0 2px 4px rgba(0, 0, 0, 0.6);
-    border: 2px solid #1B1B1B;
-    background: #313131;
-}
-
-.post > .inner {
-    background: #1B1B1B;
-    border: 1px solid #000;
-}
-
-
 /* Main blocks
 ---------------------------------------- */
 
@@ -564,65 +552,35 @@ a.forumtitle:active,	.forumbg .header a:active,	.forabg .header a:active, 	th a:
 ---------------------------------------------------------
 Colours and backgrounds for content.css
 --------------------------------------------------------- */
-li.row,
-li.row.bg1,
+
+li.row
+{
+    background: #D8D8D8;
+    border-color: #C5C5C5;
+}
+
 li.row.bg2 {
     background: #D8D8D8;
     border-color: #C5C5C5;
-    border-width: 0 0 1px 0;
 }
 
-li.row {
-    border-width: 1px;
-    border-style: solid;
-    border-color: #000 transparent #161616 transparent;
-    transition: background 0.15s ease-in-out 0s;
-}
-
-li.row:hover
-{
-    background-color: #1E1E1E;
-    background-color: rgba(30, 30, 30, 0.8);
-}
-
-li.row.bg1 {
-    background: #252525 linear-gradient(to bottom, rgba(30, 30, 30, 1) 0, rgba(37, 37, 37, 0) 35px);
-    border-color: #252525 #000 #000 #252525;
-}
-
-li.row.bg1:hover
-{
-    background: #252525 linear-gradient(to top, rgba(30, 30, 30, 1) 0, rgba(37, 37, 37, 0) 35px);
-    color: #FFF;
-}
-
-li.row.bg2 {
-    background: #161616 linear-gradient(to bottom, rgba(11, 11, 11, 1) 0, rgba(22, 22, 22, 0) 35px);
-    border-color: #161616 #000 #000 #161616;
-}
-
-li.row.bg2:hover
-{
-    background: #161616 linear-gradient(to top, rgba(11, 11, 11, 1) 0, rgba(22, 22, 22, 0) 35px);
-    color: #FFF;
-}
-
-li.row.bg3 /* unread notifications */
-{
-    background: #333 linear-gradient(to bottom, rgba(40, 40, 40, 1) 0, rgba(51, 51, 51, 0) 35px);
-    border-color: #333 #000 #000 #333;
-}
-
-li.row.bg3:hover
-{
-    background: #333 linear-gradient(to top, rgba(40, 40, 40, 1) 0, rgba(51, 51, 51, 0) 35px);
-    color: #FFF;
+li.row.bg3 {
+    background: #E3E7E9;
+    border-color: #C5C5C5;
 }
 
 li.row strong {
     color: #363535;
 }
 
+li.row:hover,
+li.row.bg1:hover,
+li.row.bg2:hover,
+li.row.bg3:hover
+{
+    background: #E6E6E6;
+    color: #4A4A4A;
+}
 
 li.row.sticky,
 li.row.announce,
@@ -631,23 +589,13 @@ li.row.global-announce {
 }
 
 li.row.reported,
-li.row.reported:hover,
-.panel-container .panel li.row.reported,
-.panel-container .panel li.row.reported:hover {
-    background-image: linear-gradient(to bottom, rgba(255, 17, 17, 1) 0, rgba(255, 17, 17, 0.3) 2%, rgba(255, 0, 100, 0) 25%, rgba(255, 0, 100, 0) 75%, rgba(255, 17, 17, 0.3) 98%, rgba(255, 17, 17, 1) 100%);
-}
-
-
-li.row.reported,
-li.row.reported:hover,
-.panel-container .panel li.row.reported,
-.panel-container .panel li.row.reported:hover {
+li.row.reported:hover
+{
     background: #e6c5c5;
 }
 
-
-li.row.reported:hover,
-.panel-container .panel li.row.reported:hover {
+li.row.reported:hover
+{
     background-color: rgba(255, 17, 17, 0.3);
 }
 
@@ -731,6 +679,11 @@ blockquote {
     background-image: none;
     border-color: rgba(200, 200, 200, 0.6);
     border-top: rgba(0, 0, 0, 0.5);
+}
+
+.post > .inner {
+    background: #F2F3F3;
+    border-bottom: #CAC9C8;
 }
 
 .topic_poll:before,
@@ -1153,52 +1106,34 @@ Colours and backgrounds for cp.css
 }
 
 .panel-container .panel li.row {
-    border-width: 1px;
     border-style: solid;
-    border-color: #000 transparent #161616 transparent;
     transition: background 0.15s ease-in-out 0s;
 }
 
-.panel-container .panel li.row:hover {
-    background-color: #1E1E1E;
-    background-color: rgba(30, 30, 30, 0.8);
-}
-
-.panel-container .panel li.row.bg1 {
-    background: #252525 linear-gradient(to bottom, rgba(30, 30, 30, 1) 0, rgba(37, 37, 37, 0) 35px);
-    border-color: #252525 #000 #000 #252525;
-}
-
-.panel-container .panel li.row.bg1:hover {
-    background: #252525 linear-gradient(to top, rgba(30, 30, 30, 1) 0, rgba(37, 37, 37, 0) 35px);
-    color: #FFF;
-}
-
+.panel-container .panel li.row,
+.panel-container .panel li.row.bg1,
 .panel-container .panel li.row.bg2 {
-    background: #161616 linear-gradient(to bottom, rgba(11, 11, 11, 1) 0, rgba(22, 22, 22, 0) 35px);
-    border-color: #161616 #000 #000 #161616;
+    background: #ECEBEA;
+    border-color: #C5C5C5;
+    border-width: 0 0 1px 0;
 }
 
-.panel-container .panel li.row.bg2:hover {
-    background: #161616 linear-gradient(to top, rgba(11, 11, 11, 1) 0, rgba(22, 22, 22, 0) 35px);
-    color: #FFF;
+.panel-container .panel li.row:hover,
+.panel-container .panel li.row.bg1:hover,
+.panel-container .panel li.row.bg2:hover,
+.panel-container .panel li.row.bg3:hover {
+    background: #E6E6E6;
+    color: #4A4A4A;
 }
 
 .panel-container .panel li.row.bg3 {
-    background: #333 linear-gradient(to bottom, rgba(40, 40, 40, 1) 0, rgba(51, 51, 51, 0) 35px);
-    border-color: #333 #000 #000 #333;
+    background: #E3E7E9;
+    border-color: #C5C5C5;
 }
 
-.panel-container .panel li.row.bg3:hover {
-    background: #333 linear-gradient(to top, rgba(40, 40, 40, 1) 0, rgba(51, 51, 51, 0) 35px);
-    color: #FFF;
-}
-
-#cp-main .pm {
-    background: #212121;
-    background: rgba(40, 40, 40, 0.7) linear-gradient(to top, rgba(0, 0, 0, 0.25) 0, rgba(0, 0, 0, 0) 46px);
+#cp-main  {
+    background: #ECEBEA;
     border: #444;
-    box-shadow: rgba(0, 0, 0, 0.6);
 }
 
 #cp-main h3, #cp-main hr, #cp-menu hr {
@@ -1387,7 +1322,13 @@ Colours and backgrounds for forms.css
 
 /* General form styles
 ----------------------------------------*/
-
+select {
+    background: #040d1a url("./images/icons/select.png") no-repeat 100% center;
+    background-color: #FFF;
+    background-image: url("./images/icons/select.png");
+    border-color: #b5b3b2;
+    color: #5a5a5a;
+}
 
 
 /* Definition list layout for forms
@@ -1415,6 +1356,145 @@ Colours and backgrounds for forms.css
 /* Search box (header)
 --------------------------------------------- */
 
+.search-box .inputbox {
+    border-color: #5d5d5d;
+}
+
+option.disabled-option { color: #888; }
+
+label { color: #FFF; }
+
+dd label { color: #CCC; }
+
+label, dd label {
+    color: inherit;
+}
+
+fieldset dt {
+    color: #3D6F95;
+}
+fieldset dl:hover dt label { color: #00C0FF; }
+
+fieldset.fields2 dl:hover dt label { color: #00C0FF; }
+
+fieldset dl:hover dt label,
+fieldset.fields2 dl:hover dt label {
+    color: #0295EE;
+}
+
+#message-box textarea { color: #5a5a5a; }
+
+#message-box textarea.drag-n-drop {
+    outline-color: rgba(102, 102, 102, 0.5);
+}
+
+#message-box textarea.drag-n-drop-highlight {
+    outline-color: rgba(17, 163, 234, 0.5);
+}
+
+/* Input field styles
+---------------------------------------- */
+
+.inputbox {
+    background: #FFF;
+    border-color: #cac9c8;
+    color: #5a5a5a;
+}
+
+.inputbox:hover,
+.inputbox:focus {
+    border-color: #1c9ec1;
+}
+.inputbox:focus {
+    color: #4a4a4a;
+}
+
+.inputbox:-moz-placeholder { color: #707070; opacity: 0.6; }
+.inputbox::-moz-placeholder { color: #707070; opacity: 0.6; }
+.inputbox::-webkit-input-placeholder { color: #707070; opacity: 0.6; }
+
+
+/* Form button styles
+---------------------------------------- */
+
+a.button1, a.button1:active,
+a.button2, a.button2:active {
+    color: #DDD;
+}
+
+/* Form buttons */
+a.button1, input.button1,
+a.button2, input.button2, input.button3 {
+    background: #0081b4;
+    background: linear-gradient(rgba(0, 129, 180, 1), rgba(0, 106, 155, 1));
+    color: #DDD;
+    box-shadow: rgba(0,0,0,0.3);
+}
+
+input.button1:active, input.button2:active, input.button3:active {
+    background-image: linear-gradient(to bottom, #111, #222);
+    box-shadow: inset 0 0 2px 1px #000, 0 2px 5px 1px rgba(0, 0, 0, 0.5);
+    border-color: #888;
+    color: #CCC;
+}
+
+a.button1:hover, input.button1:hover,
+a.button2:hover, input.button2:hover, input.button3:hover,
+input.button1:active, input.button3:active, input.button2:active {
+    background: #009ee2;
+    background: linear-gradient(rgba(0, 158, 226, 1), rgba(0, 158, 226, 1));
+    box-shadow: rgba(0, 129, 180, 0.25);
+    color: #FFF;
+}
+
+input.button1:focus, input.button2:focus, input.button3:focus {
+    border-color: #00C0FF;
+    color: #FFF;
+}
+
+input.disabled {
+    color: #999;
+}
+
+.button1.disabled {
+    background: #6D7176;
+    border-color: #6D7176;
+    box-shadow: rgba(0, 0, 0, 0.3);
+    text-shadow: rgba(0, 0, 0, 0.8);
+    color: #E1E0E0 !important;
+}
+
+
+/* Posting */
+#format-buttons input {
+    background: #444;
+    background: linear-gradient(#585858, #444444);
+    border-color: #a3a1a0;
+    color: #FFF;
+}
+
+#format-buttons input:hover {
+    background: #606060;
+    background: linear-gradient(#838383, #606060);
+    border-color: #dcdada;
+}
+
+
+/* Search box (header)
+--------------------------------------------- */
+
+.search-header .inputbox {
+    border: #7F7F7F;
+}
+
+.search-header .inputbox:focus {
+    border: 1px solid #11A3EA;
+}
+
+.search-header .inputbox:focus {
+    border: none;
+    color: #000;
+}
 
 
 /* jQuery popups
