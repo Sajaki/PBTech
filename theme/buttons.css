@@ -18,6 +18,9 @@
     box-sizing: border-box;
 }
 
+.pagination .button {
+    text-shadow: none;
+}
 
 .dropdown-select {
     padding-right: 5px;

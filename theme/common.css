@@ -517,11 +517,11 @@ ul.topiclist li.header {
 }
 
 ul.topiclist dl {
-    font-size: 10px;
+    font-size: 11px;
 }
 
 ul.topiclist dt, dd.lastpost, dd.redirect, dd.moderation, dd.time, dd.info, dd.extra {
-    font-size: 10px;
+    font-size: 11px;
 }
 
 ul.topiclist li.row .list-inner {
@@ -635,7 +635,7 @@ table.table1 tbody .big-column td {
 }
 
 .pagination li a {
-    border: 1px solid transparent;
+    border: 1px solid;
     border-radius: 2px;
     display: block;
     font-size: 0.9em;
@@ -694,11 +694,18 @@ table.table1 tbody .big-column td {
 
 /* Pagination in viewforum for multipage topics */
 .row .pagination {
+    padding: 1px 0 1px 15px;
     display: block;
-    margin-top: -18px;
-    background: none;
+    margin-top: 0px;
     font-size: 10px;
     margin-bottom: 3px;
+}
+
+.row .pagination li a, .row .pagination li span {
+    border: none;
+    display: inline;
+    font-size: 1.1em;
+    padding: 0;
 }
 
 /* jQuery popups
@@ -932,9 +939,7 @@ ul.linklist li.responsive-menu a.responsive-menu-link:before {
 }
 
 /* Contact menu */
-.contact-icons a {
-    border-color: #333;
-}
+
 
 /* Profile Context Menu
 --------------------------------------------- */

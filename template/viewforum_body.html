@@ -194,37 +194,32 @@
 
 						{% endif %}
 
-						<div class="topic-poster responsive-hide left-box">
-							{% if topicrow.S_HAS_POLL %}<i class="icon fa-bar-chart fa-fw" aria-hidden="true"></i>{% endif %}
-							{% if topicrow.ATTACH_ICON_IMG %}<i class="icon fa-paperclip fa-fw" aria-hidden="true"></i>{% endif %}
-							{% EVENT topiclist_row_topic_by_author_before %}
-							{{ lang('POST_BY_AUTHOR') }} {% EVENT viewforum_body_topic_author_username_prepend %}{{ topicrow.TOPIC_AUTHOR_FULL }}{% EVENT viewforum_body_topic_author_username_append %} &raquo; <time datetime="{{ topicrow.FIRST_POST_TIME_RFC3339 }}">{{ topicrow.FIRST_POST_TIME }}</time>
-							{% EVENT topiclist_row_topic_by_author_after %}
-							{% if topicrow.S_POST_GLOBAL and FORUM_ID != topicrow.FORUM_ID %} &raquo; {{ lang('IN') }} <a href="{{ topicrow.U_VIEW_FORUM }}">{{ topicrow.FORUM_NAME }}</a>{% endif %}
-						</div>
+                        {% if topicrow.pagination|length %}
+                        <div class="pagination">
+                            <span><i class="icon fa-clone fa-fw" aria-hidden="true"></i></span>
+                            <ul>
+                                {% for pagination in topicrow.pagination %}
+                                {% if pagination.S_IS_PREV %}
+                                {% elseif pagination.S_IS_CURRENT %}<li class="active"><span>{{ pagination.PAGE_NUMBER }}</span></li>
+                                {% elseif pagination.S_IS_ELLIPSIS %}<li class="ellipsis"><span>{{ lang('ELLIPSIS') }}</span></li>
+                                {% elseif pagination.S_IS_NEXT %}
+                                {% else %}<li><a class="button" href="{{ pagination.PAGE_URL }}">{{ pagination.PAGE_NUMBER }}</a></li>
+                                {% endif %}
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        {% endif %}
 
-						{% if topicrow.pagination|length %}
-						<div class="pagination">
-							<span><i class="icon fa-clone fa-fw" aria-hidden="true"></i></span>
-							<ul>
-							{% for pagination in topicrow.pagination %}
-								{% if pagination.S_IS_PREV %}
-								{% elseif pagination.S_IS_CURRENT %}<li class="active"><span>{{ pagination.PAGE_NUMBER }}</span></li>
-								{% elseif pagination.S_IS_ELLIPSIS %}<li class="ellipsis"><span>{{ lang('ELLIPSIS') }}</span></li>
-								{% elseif pagination.S_IS_NEXT %}
-								{% else %}<li><a class="button" href="{{ pagination.PAGE_URL }}">{{ pagination.PAGE_NUMBER }}</a></li>
-								{% endif %}
-							{% endfor %}
-							</ul>
-						</div>
-						{% endif %}
+                        <div class="topic-poster responsive-hide left-box">
+                            {% if topicrow.S_HAS_POLL %}<i class="icon fa-bar-chart fa-fw" aria-hidden="true"></i>{% endif %}
+                            {% if topicrow.ATTACH_ICON_IMG %}<i class="icon fa-paperclip fa-fw" aria-hidden="true"></i>{% endif %}
+                            {% EVENT topiclist_row_topic_by_author_before %}
+                            {{ lang('POST_BY_AUTHOR') }} {% EVENT viewforum_body_topic_author_username_prepend %}{{ topicrow.TOPIC_AUTHOR_FULL }}{% EVENT viewforum_body_topic_author_username_append %} &raquo; <time datetime="{{ topicrow.FIRST_POST_TIME_RFC3339 }}">{{ topicrow.FIRST_POST_TIME }}</time>
+                            {% EVENT topiclist_row_topic_by_author_after %}
+                            {% if topicrow.S_POST_GLOBAL and FORUM_ID != topicrow.FORUM_ID %} &raquo; {{ lang('IN') }} <a href="{{ topicrow.U_VIEW_FORUM }}">{{ topicrow.FORUM_NAME }}</a>{% endif %}
+                        </div>
 
-						<div class="responsive-hide">
-							{% if topicrow.S_HAS_POLL %}{{ POLL_IMG }} {% endif %}
-							{% if topicrow.ATTACH_ICON_IMG %}{{ topicrow.ATTACH_ICON_IMG }} {% endif %}
-							{{ lang('POST_BY_AUTHOR') }} {{ topicrow.TOPIC_AUTHOR_FULL }} &raquo; {{ topicrow.FIRST_POST_TIME }}
-							{% if topicrow.S_POST_GLOBAL and FORUM_ID != topicrow.FORUM_ID %} &raquo; {{ lang('IN') }} <a href="{{ topicrow.U_VIEW_FORUM }}">{{ topicrow.FORUM_NAME }}</a>{% endif %}
-						</div>
+
 
 						{% EVENT topiclist_row_append %}
 					</div>
@@ -238,7 +233,7 @@
 								{{ LAST_POST_IMG }}
 							</a>
 						{% endif %}
-						<br /><time datetime="{{ topicrow.LAST_POST_TIME_RFC3339 }}">{{ topicrow.LAST_POST_TIME }}</time>
+                        <br /><time datetime="{{ topicrow.LAST_POST_TIME_RFC3339 }}">{{ topicrow.LAST_POST_TIME }}</time>
 					</span>
 				</dd>
 			</dl>

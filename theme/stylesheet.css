@@ -168,8 +168,9 @@ dl.topic_read_hot_mine,
 dl.topic_read_locked,
 dl.topic_read_locked_mine,
 dl.pm_read {
-	opacity: 0.75;
+	opacity: 0.90;
 }
+
 
 /* =Media queries (all >700px rules are in responsive.css)
 -------------------------------------------------------------- */

@@ -2,6 +2,8 @@
 --------------------------------------------------------------
 Colours and backgrounds for common.css
 -------------------------------------------------------------- */
+/* General Markup Styles
+---------------------------------------- */
 html, body {
     color: #4A4A4A;
     background-color: #000;
@@ -237,49 +239,74 @@ table.info tbody th {
     color: #00577E;
 }
 
+/* Pagination
+--------------------------------------------- */
 
-/* Forums list contents */
-
-.forum-blocks dl {
-    background: #E5E4E3;
+.pagination li a {
+    color: #CECECE;
+    background: #333;
+    background: linear-gradient(#333, #505050);
+    border-color: transparent;
 }
 
-.forum-blocks dl .list-inner {
-    color: #877B69;
+.pagination li a,
+.pagination li.page-jump a, .pagination li.next a, .pagination li.previous a {
+    background: #333;
+    background: linear-gradient(#333, #505050);
+    border-color: transparent;
+    color: #CECECE;
 }
 
-.forum-blocks dl .list-inner {
-    color: #656565;
+.row .pagination li a {
+    background: none;
+    color: #074e79;
 }
 
-.forum-blocks dd.forum-stats,
-.forum-blocks dd.redirect,
-.forum-blocks dd.mcp-status,
-#recent-topics dd.lastpost {
-    color: #8d929c;
+.pagination li a:hover,
+.pagination .active a:hover,
+.pagination .dropdown-visible a.dropdown-trigger,
+.nojs .pagination .dropdown-container:hover a.dropdown-trigger {
+    background: #1D1D1D;
+    background: linear-gradient(#1D1D1D, #343434);
+    border-color: transparent;
+    color: #FFF;
+    text-decoration: none;
+    box-shadow: none;
 }
 
-.forum-blocks dl.unread {
-    background: #F2F1F0;
+.pagination li.active span {
+    background-color: #0080B2;
+    border-color: transparent;
+    color: #FFFFFF;
 }
 
-.forum-blocks dl:hover .list-inner {
-    color: #000;
+.pagination li.active span:hover {
+    background-color: #009EE2;
+    border-color: transparent;
+    color: #FFF;
+    text-decoration: none;
+    box-shadow: none;
 }
 
-/* Other blocks */
-.misc-block, .stat-block p {
-    background: #E5E4E3;
-}
 
-/* Hover states */
-.forum-blocks dl:hover {
-    background: #FFFFFF;
-    border: none #00C0FF;
-}
 
-/* Topic Lists
+
+
+
+
+/* jQuery popups
 ---------------------------------------- */
+
+.phpbb_alert {
+    background-color: #fcfbfa;
+    border-color: #575757;
+    box-shadow: 0 0 10px #666;
+}
+
+.phpbb_alert .alert_close:after {
+    color: #F00;
+}
+
 
 
 /* Miscellaneous styles
@@ -349,7 +376,6 @@ ul.linklist li.responsive-menu a.responsive-menu-link:before {
 
 /* Drop-down menu
 --------------------------------------------- */
-
 
 .dropdown .pointer {
     border-color: #999 transparent;
@@ -442,6 +468,11 @@ li.notification-reported strong, li.notification-disapproved strong {
     color: #FF1111;
 }
 
+/* Contact menu */
+.contact-icons a {
+    border-color: #333;
+}
+
 .contact-icons a:hover {
     background-color: #292A2A;
 }
@@ -492,6 +523,49 @@ li.notification-reported strong, li.notification-disapproved strong {
 .profile-context .user-icons a:hover:before {
     color: #FFF;
 }
+
+
+
+/* pbWow Forums list contents */
+
+.forum-blocks dl {
+    background: #E5E4E3;
+}
+
+.forum-blocks dl .list-inner {
+    color: #877B69;
+}
+
+.forum-blocks dl .list-inner {
+    color: #656565;
+}
+
+.forum-blocks dd.forum-stats,
+.forum-blocks dd.redirect,
+.forum-blocks dd.mcp-status,
+#recent-topics dd.lastpost {
+    color: #8d929c;
+}
+
+.forum-blocks dl.unread {
+    background: #F2F1F0;
+}
+
+.forum-blocks dl:hover .list-inner {
+    color: #000;
+}
+
+/* Other blocks */
+.misc-block, .stat-block p {
+    background: #E5E4E3;
+}
+
+/* Hover states */
+.forum-blocks dl:hover {
+    background: #FFFFFF;
+    border: none #00C0FF;
+}
+
 
 
 /*
@@ -1501,18 +1575,6 @@ input.disabled {
 }
 
 
-/* jQuery popups
----------------------------------------- */
-
-.phpbb_alert {
-    background-color: #fcfbfa;
-    border-color: #575757;
-    box-shadow: 0 0 10px #666;
-}
-
-.phpbb_alert .alert_close:after {
-    color: #F00;
-}
 
 /* Notifications
 ---------------------------------------- */
