@@ -18,7 +18,7 @@ For more information and support, we suggest you visit
 - [avathar.be] (https://www.avathar.be/forum/viewforum.php?f=82)  
 
 ### Changes
-3.0.15 (tbd)
+3.0.15 (10/01/2020)
 - updated for phpbb 3.3.2
 
 3.0.14 (03/01/2020)
