@@ -763,15 +763,12 @@ body.section-viewtopic div.rules {
 div.rules,
 body.section-viewforum div.rules,
 body.section-viewtopic div.rules {
-    background-size: 100% 2px, 100% 2px;
-    background-position: 0 0, 0 100%;
-    background-repeat: no-repeat;
     border: none;
     border-radius: 5px;
     color: inherit;
     margin: 10px 0;
     padding: 1rem;
-    box-shadow: none;
+
 }
 
 body.section-viewforum div.rules > .inner,
