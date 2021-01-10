@@ -205,12 +205,12 @@ i, em {
 }
 
 #body-header li.breadcrumbs {
-    padding: 0 0 0 15px;
+    padding: 0 0 0 1px;
 }
 
 #body-header li.breadcrumbs:before,
 #page-footer li.breadcrumbs:before {
-    content: '\f015';
+    /*content: '\f015';*/
     display: block;
     position: absolute;
     font-family: FontAwesome;
