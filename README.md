@@ -18,7 +18,9 @@ For more information and support, we suggest you visit
 - [avathar.be] (https://www.avathar.be/forum/viewforum.php?f=82)  
 
 ### Changes
-3.0.15 **** under development ***
+3.0.15 RC2 **under development**
+
+3.0.15 RC1 10-01-2021  
 - updated for phpbb 3.3
 
 3.0.14 (03/01/2020)
