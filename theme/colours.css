@@ -730,8 +730,8 @@ blockquote {
 .post.reported,
 .post.warned,
 .post.deleted {
-    background-color: rgba(0,0,0,0.09);
-    background: linear-gradient(to bottom, rgb(191 189 189 / 14%) 0%, rgb(245 245 245 / 14%) 100%);
+    background: rgb(255,255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,0.7) 0%, rgba(245,245,245,0.5) 0%, rgba(245,245,245,1) 100%);
     border-bottom: #CAC9C8;
 }
 
