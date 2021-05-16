@@ -842,11 +842,11 @@ blockquote:after {
     background: linear-gradient(to bottom, #cacac7 0%, #C8C8C8 60%);
     border-color: transparent;
     box-shadow: none;
-    color: #1a9514;
+    color: #2E8B57;
 }
 
 .codebox code {
-    color: #1a9514;
+    color: #2E8B57;
     text-align: left;
     max-height: 400px;
 }
@@ -876,7 +876,7 @@ code.inline {
     background-color: rgba(10, 10, 10, 0.3);
     border: 1px solid rgba(88, 88, 88, 0.7);
     border-radius: 2px;
-    color: #209347;
+    color: #2E8B57;
     display: inline;
     font-family: Monaco, 'Andale Mono', 'Courier New', Courier, monospace;
     font-size: 0.8em;
