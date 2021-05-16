@@ -98,7 +98,7 @@
 					<dd class="views">{{ searchresults.TOPIC_VIEWS }}</dd>
 					<dd class="lastpost"><span>
 						{{ lang('POST_BY_AUTHOR') }} {{ searchresults.LAST_POST_AUTHOR_FULL }}
-						{% if not S_IS_BOT %}<a href="{{ searchresults.U_LAST_POST }}" title="{{ lang('GOTO_LAST_POST') }}">{{ LAST_POST_IMG }}</a> {% endif %}<br />{{ searchresults.LAST_POST_TIME }}<br /> </span>
+						{% if not S_IS_BOT %}<a href="{{ searchresults.U_LAST_POST }}" title="{{ lang('GOTO_LAST_POST') }}">{{ LAST_POST_IMG }}</a> {% endif %}<br /><time datetime="{{ searchresults.LAST_POST_TIME_RFC3339 }}">{{ searchresults.LAST_POST_TIME }}<br /> </span>
 					</dd>
 				</dl>
 			</li>
