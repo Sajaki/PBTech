@@ -776,7 +776,7 @@ blockquote {
 /* Quote block */
 
 blockquote {
-    background: rgba(10, 10, 10, 0.2) linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 0, rgba(0, 0, 0, 0) 30%);
+    background: rgba(185, 185, 185, 0.2) linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 0, rgba(0, 0, 0, 0) 30%);
     border-color: #575757;
     color: #313131;
     padding: 6px 10px 10px 10px;
@@ -790,6 +790,16 @@ blockquote {
     border-radius: 5px;
     box-shadow: none;
 }
+
+blockquote blockquote {
+    background: rgba(168, 168, 168, 0.2) linear-gradient(to bottom, rgba(123, 123, 123, 0.25) 0, rgba(0, 0, 0, 0) 30%);
+}
+
+blockquote blockquote blockquote{
+    background: rgba(185, 185, 185, 0.2) linear-gradient(to bottom, rgba(123, 123, 123, 0.25) 0, rgba(0, 0, 0, 0) 30%);
+
+}
+
 
 blockquote:before, blockquote:after {
     font-family: FontAwesome;
@@ -832,11 +842,11 @@ blockquote:after {
     background: linear-gradient(to bottom, #cacac7 0%, #C8C8C8 60%);
     border-color: transparent;
     box-shadow: none;
-    color: #35B92F;
+    color: #1a9514;
 }
 
 .codebox code {
-    color: #35B92F;
+    color: #1a9514;
     text-align: left;
     max-height: 400px;
 }
