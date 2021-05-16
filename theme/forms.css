@@ -73,6 +73,9 @@ body.section-search p:not(.jumpbox-return) a.arrow-right {
 .search-box button.search-icon,
 .search-box a.button {
     padding: 0 7px;
+    font-size:0;
+    border-radius: 0 4px 4px 0;
+    margin:0;
 }
 
 input[type=checkbox][disabled] {

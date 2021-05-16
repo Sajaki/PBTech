@@ -205,7 +205,7 @@ i, em {
 }
 
 #body-header li.breadcrumbs {
-    padding: 0 0 0 1px;
+    padding: 0 0 0 15px;
 }
 
 #body-header li.breadcrumbs:before,

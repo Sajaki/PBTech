@@ -686,7 +686,7 @@ li.header dt, li.header dd {
 .postbody,
 .content,
 blockquote {
-    color: #4A4A4A;
+    color: #313131;
     text-shadow: none;
 }
 
@@ -697,7 +697,7 @@ blockquote {
 }
 
 .post:target .content {
-    color: #000;
+    color: #313131;
 }
 
 
@@ -776,9 +776,9 @@ blockquote {
 /* Quote block */
 
 blockquote {
-    background: rgba(10, 10, 10, 0.2) linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 0, rgba(0, 0, 0, 0) 30%);
+    background: rgba(185, 185, 185, 0.2) linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 0, rgba(0, 0, 0, 0) 30%);
     border-color: #575757;
-    color: #CCCCCC;
+    color: #313131;
     padding: 6px 10px 10px 10px;
     position: relative;
     box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.4);
@@ -790,6 +790,16 @@ blockquote {
     border-radius: 5px;
     box-shadow: none;
 }
+
+blockquote blockquote {
+    background: rgba(168, 168, 168, 0.2) linear-gradient(to bottom, rgba(123, 123, 123, 0.25) 0, rgba(0, 0, 0, 0) 30%);
+}
+
+blockquote blockquote blockquote{
+    background: rgba(185, 185, 185, 0.2) linear-gradient(to bottom, rgba(123, 123, 123, 0.25) 0, rgba(0, 0, 0, 0) 30%);
+
+}
+
 
 blockquote:before, blockquote:after {
     font-family: FontAwesome;
@@ -832,11 +842,11 @@ blockquote:after {
     background: linear-gradient(to bottom, #cacac7 0%, #C8C8C8 60%);
     border-color: transparent;
     box-shadow: none;
-    color: #35B92F;
+    color: #2E8B57;
 }
 
 .codebox code {
-    color: #35B92F;
+    color: #2E8B57;
     text-align: left;
     max-height: 400px;
 }
@@ -866,7 +876,7 @@ code.inline {
     background-color: rgba(10, 10, 10, 0.3);
     border: 1px solid rgba(88, 88, 88, 0.7);
     border-radius: 2px;
-    color: #209347;
+    color: #2E8B57;
     display: inline;
     font-family: Monaco, 'Andale Mono', 'Courier New', Courier, monospace;
     font-size: 0.8em;
@@ -1094,7 +1104,7 @@ fieldset.polls dl.voted {
 }
 
 .postprofile strong {
-    color: #DDD;
+    color: #0072a3;
 }
 
 /* Gaming assets (pbWow extension)

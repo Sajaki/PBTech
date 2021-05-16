@@ -165,6 +165,14 @@
 			<dd><strong>{{ postrow.PROFILE_FIELD1_NAME }}{{ lang('COLON') }}</strong> {{ postrow.PROFILE_FIELD1_VALUE }}</dd>
 		{% endif %}
 
+		{% EVENT viewtopic_body_postrow_custom_fields_before %}
+		{% for custom_fields in postrow.custom_fields %}
+		{% if not custom_fields.S_PROFILE_CONTACT %}
+		<dd class="profile-custom-field profile-{{ custom_fields.PROFILE_FIELD_IDENT }}"><strong>{{ custom_fields.PROFILE_FIELD_NAME }}{{ lang('COLON') }}</strong> {{ custom_fields.PROFILE_FIELD_VALUE }}</dd>
+		{% endif %}
+		{% endfor %}
+		{% EVENT viewtopic_body_postrow_custom_fields_after %}
+
 		{% EVENT viewtopic_body_contact_fields_before %}
 		{% if not S_IS_BOT and postrow.contact|length %}
 			<dd class="profile-contact">
@@ -265,35 +273,35 @@
 					{% if postrow.U_DELETE %}
 						<li>
 							<a href="{{ postrow.U_DELETE }}" title="{{ lang('DELETE_POST') }}" class="button icon-button delete-icon">
-								<span>{{ lang('DELETE_POST') }}</span>
+								<span>{{ lang('BUTTON_DELETE') }}</span>
 							</a>
 						</li>
 					{% endif %}
 					{% if postrow.U_REPORT %}
 						<li>
 							<a href="{{ postrow.U_REPORT }}" title="{{ lang('REPORT_POST') }}" class="button icon-button report-icon">
-								<span>{{ lang('REPORT_POST') }}</span>
+								<span>{{ lang('BUTTON_REPORT') }}</span>
 							</a>
 						</li>
 					{% endif %}
 					{% if postrow.U_WARN %}
 						<li>
 							<a href="{{ postrow.U_WARN }}" title="{{ lang('WARN_USER') }}" class="button icon-button warn-icon">
-								<span>{{ lang('WARN_USER') }}</span>
+								<span>{{ lang('BUTTON_WARN') }}</span>
 							</a>
 						</li>
 					{% endif %}
 					{% if postrow.U_INFO %}
 						<li>
 							<a href="{{ postrow.U_INFO }}" title="{{ lang('INFORMATION') }}" class="button icon-button info-icon">
-								<span>{{ lang('INFORMATION') }}</span>
+								<span>{{ lang('BUTTON_INFORMATION') }}</span>
 							</a>
 						</li>
 					{% endif %}
 					{% if postrow.U_QUOTE %}
 						<li>
 							<a href="{{ postrow.U_QUOTE }}" title="{{ lang('REPLY_WITH_QUOTE') }}" class="button icon-button quote-icon">
-								<span>{{ lang('QUOTE') }}</span>
+								<span>{{ lang('BUTTON_QUOTE') }}</span>
 							</a>
 						</li>
 					{% endif %}
@@ -318,8 +326,11 @@
 			{% EVENT viewtopic_body_postrow_post_details_after %}
 
 			{% if postrow.S_POST_UNAPPROVED %}
+
+			{% if postrow.S_CAN_APPROVE %}
 			<form method="post" class="mcp_approve" action="{{ postrow.U_APPROVE_ACTION }}">
 				<p class="post-notice unapproved">
+					<span><i class="icon fa-question icon-red fa-fw" aria-hidden="true"></i></span>
 					<strong>{{ lang('POST_UNAPPROVED_ACTION') }}</strong>
 					<input class="button2" type="submit" value="{{ lang('DISAPPROVE') }}" name="action[disapprove]" />
 					<input class="button1" type="submit" value="{{ lang('APPROVE') }}" name="action[approve]" />
@@ -327,6 +338,13 @@
 					{{ S_FORM_TOKEN }}
 				</p>
 			</form>
+			{% else %}
+			<p class="post-notice unapproved">
+				<span><i class="icon fa-exclamation icon-red fa-fw" aria-hidden="true"></i></span>
+				<strong>{{ lang('POST_UNAPPROVED_EXPLAIN') }}</strong>
+			</p>
+			{% endif %}
+
 			{% elseif postrow.S_POST_DELETED %}
 			<form method="post" class="mcp_approve" action="{{ postrow.U_APPROVE_ACTION }}">
 				<p class="post-notice deleted">
