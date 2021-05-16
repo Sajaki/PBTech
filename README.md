@@ -19,6 +19,9 @@ For more information and support, we suggest you visit
 - [avathar.be] (https://www.avathar.be/forum/viewforum.php?f=82)  
 
 ### Changes
+3.2.0  (16/05/2021)
+- improved version for phpBB 3.2.10
+
 3.0.14 (03/01/2020)
 - updated for phpbb 3.2.10
 
